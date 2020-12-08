@@ -30,7 +30,7 @@
       </div>  
     </section>
 <header id="header-nav" class="header-desktop-adjust">
-  <img src="https://i.imgur.com/Kio5ah0.png" width="50" height="50">
+<img src="<?php echo get_stylesheet_directory_uri();?>/img/cnnssa_logo.png" width="252" height="50">
 <?php wp_nav_menu( array( 'theme_location' => 'main-menu' ) ); ?>
 </header>
 <div id="translate-option" class="translate-section">
@@ -38,4 +38,3 @@
 </div>
 <body id="body-adjust" <?php body_class(); ?>>
 <div id="container">
-  

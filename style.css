@@ -1579,6 +1579,17 @@ footer {
     width: 100%; }
     #board-of-directors-page h1 span {
       color: #003952; }
+  #board-of-directors-page i {
+    background: #003952;
+    color: #a9cf38;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    border-radius: 200px;
+    margin: 0 auto; }
   #board-of-directors-page .board-of-directors-content {
     background: #00b5c2;
     color: #003952; }
@@ -1596,7 +1607,8 @@ footer {
           width: 150px;
           height: 150px;
           border-radius: 100px;
-          margin: 0 auto; }
+          margin: 0 auto;
+          object-fit: cover; }
         #board-of-directors-page .board-of-directors-content .content-wrapper article h3 {
           font-size: 1.75rem;
           line-height: 1.75rem;

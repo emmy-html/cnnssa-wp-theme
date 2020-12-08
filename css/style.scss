@@ -713,6 +713,7 @@ CNNSSA Parent Theme is distributed under the terms of the GNU GPL
   /* Board of Directors Page */ 
 #board-of-directors-page {
   @include page-header;
+  @include fontawesome-icon;
   width: 100%;
   .board-of-directors-content {
     background: $light-blue;
@@ -732,6 +733,7 @@ CNNSSA Parent Theme is distributed under the terms of the GNU GPL
           height: 150px;
           border-radius: 100px;
           margin: 0 auto;
+          object-fit: cover;
         }
         h3 {
           font-size: 1.75rem;
