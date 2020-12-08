@@ -1,0 +1,3176 @@
+/*
+Theme Name: CNNSSA Parent Theme
+Theme URI: https://github.com/emmy-html/cnnssa-wp-theme
+Author: emmy-html
+Author URI: https://github.com/emmy-html
+Description: This theme was written by Emmy for the Community Nutrition Network & Senior Services Association. Thanks to Tidy Themes for the Blankslate base! https://github.com/tidythemes/blankslate/
+Version: 2020.1
+License: GNU General Public License
+License URI: https://www.gnu.org/licenses/gpl.html
+Tags: one-column, two-columns, custom-menu, featured-images, microformats, sticky-post, threaded-comments, translation-ready
+Text Domain: cnnssa
+
+CNNSSA Parent WordPress Theme © 2020 emmy-html
+CNNSSA Parent Theme is distributed under the terms of the GNU GPL
+*/
+/* imports */
+@import "colors";
+@import "fonts";
+@import "mixins";
+@import "variables";
+@import "navigation";
+@import "normalize";
+/*! HTML5 Boilerplate v7.3.0 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 2.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+   html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+  }
+  
+  /*
+   * Remove text-shadow in selection highlight:
+   * https://twitter.com/miketaylr/status/12228805301
+   *
+   * Vendor-prefixed and regular ::selection selectors cannot be combined:
+   * https://stackoverflow.com/a/16982510/7133471
+   *
+   * Customize the background color to match your design.
+   */
+  
+  ::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+  }
+  
+  ::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+  }
+  
+  /*
+   * A better looking default horizontal rule
+   */
+  
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+  }
+  
+  /*
+   * Remove the gap between audio, canvas, iframes,
+   * images, videos and the bottom of their containers:
+   * https://github.com/h5bp/html5-boilerplate/issues/440
+   */
+  
+  audio,
+  canvas,
+  iframe,
+  img,
+  svg,
+  video {
+    vertical-align: middle;
+  }
+  
+  /*
+   * Remove default fieldset styles.
+   */
+  
+  fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /*
+   * Allow only vertical resizing of textareas.
+   */
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  /* ==========================================================================
+     Browser Upgrade Prompt
+     ========================================================================== */
+  
+  .browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+  }
+  /* ==========================================================================
+     Helper classes
+     ========================================================================== */
+  
+  /*
+   * Hide visually and from screen readers
+   */
+  
+  .hidden {
+    display: none !important;
+  }
+  
+  /* Author's Styles */ 
+  /* Fonts & Colors */ 
+  @import "colors";
+  @import "fonts";
+  @import "variables";
+  @import "mixins";
+  /* Universal Styles */ 
+.topbar {
+  display: none;
+}
+.sticky {
+  z-index: 9999;
+  position: fixed;
+  top: 600px;
+}
+.header-nav {
+  margin-top: 0px;
+}
+#suggestion-box-popover {
+  background: #fff;
+  visibility: hidden;
+}
+#popover {
+  background: #fff;
+  visibility: hidden;
+  .popover-content {
+    background: $lime-green;
+    color: $dark-blue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 20px 0px;
+    button {
+      background: none;
+      border: none;
+      color: $dark-blue;
+      font-family: $heading-font;
+      font-size: .75rem;
+      font-weight: 900;
+      margin-left: 280px;
+    }
+    h1 {
+      font-size: 1.5rem;
+      line-height: 1.25rem;
+    }
+    h2 {
+      padding-top: 5px;
+      padding-bottom: 10px;
+    }
+    .donation-form-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: row nowrap;
+      margin: 0 auto;
+      max-width: 300px;
+      p {
+        margin: 0px;
+        padding: 0px 5px;
+      }
+      .donate-button {
+        background: $dark-blue;
+        border-bottom: none;
+        padding: 10px;
+          color: #fff;
+          font-family: $heading-font;
+          font-weight: 700;
+          text-transform: uppercase;
+          text-decoration: none;
+          &:hover {
+            background: $light-blue;
+            border-bottom: none;
+            color: $dark-blue;
+            transition: 1s background-color;
+            transition: 1s color;
+          }
+      }
+    }
+  }
+}
+  body {
+    background: $dark-blue;
+    color: #fff;
+    font-family: $body-font !important;
+    font-size: 16px;
+    line-height: 1.35rem;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: $heading-font;
+    text-transform: uppercase;
+    margin: 0;
+    text-align: center;
+  }
+  h2, h4 {
+    font-weight: 400;
+  }
+  .content-wrapper {
+    @include body-content-wrapper;
+  }
+  .button-container {
+    @include button-container;
+  }
+  main {
+    a:link,
+    a:visited {
+      color: $dark-blue;
+      border-bottom: 2px solid $lime-green;
+      text-decoration: none;
+      font-weight: 600;
+      &:hover {
+        border-bottom: 2px solid $light-blue;
+      }
+    }
+  }
+  /* Hero section */ 
+  #hero {
+    margin-top: 65px;
+    .content-wrapper {
+      padding-top: 200px;
+    }
+    h1 {
+      color: #fff;
+      margin-top: 100px;
+      font-size: 1.44rem;
+      line-height: 1.25rem;
+      text-align: center;
+      span {
+        display: block;
+        font-size: 1.58rem;
+      }
+    }
+    .rounded-green-button {
+      @include body-green-button;
+      min-width: 135px;
+      max-width: 140px;
+      margin: 0 auto;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+  }
+  /* Newsletter */ 
+  #newsletter {
+    .newsletter-container {
+      background: $dark-blue;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding-top: 25px;
+      .content-wrapper {
+        margin-top: 0px;
+        padding-top: 0px;
+      }
+      h2, h3 {
+        line-height: 1.30rem;
+        margin: 0;
+        text-align: left;
+      }
+      h2 {
+        color: $lime-green;
+        font-size: 1rem;
+      }
+      h3 {
+        color: #fff;
+        font-size: 1.95rem;
+      }
+      .ctct-form-defaults {
+        background: $dark-blue;
+        color: #fff;
+        width: 100%;
+        padding: 0px;
+      }
+      .ctct-form-header {
+        display: none;
+      }
+      .ctct-form-text {
+        color: #fff;
+        font-family: $heading-font !important;
+        line-height: 1rem;
+      }
+      .ctct-form-label {
+        color: $lime-green;
+        font-family: $heading-font;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      .ctct-gdpr-text {
+        color: #fff;
+        font-family: $body-font;
+        a:link,
+        a:visited {
+          color: $lime-green;
+          font-weight: 600;
+          text-decoration: none;
+          &:hover {
+            border-bottom: 1px solid $light-blue;
+          }
+        }
+      }
+      .ctct-form-button {
+        background: $lime-green;
+        border: none;
+        color: $dark-blue;
+        font-family: $heading-font;
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        &:hover {
+          background: $light-blue;
+        }
+      }
+      .ctct-form-footer {
+        margin: 0;
+        padding: 0;
+      }
+      .ctct-gdpr-text {
+        margin: 0;
+        padding-bottom: 20px;
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        padding: 20px 0px;
+        input {
+          border: none;
+          border-radius: $pill-radius;
+          padding: 10px 5px;
+        }
+        input[type="email"] {
+          color: lightgray;
+          text-transform: uppercase;
+          border: 1px solid white;
+          &:hover {
+            border: 1px solid $light-blue;
+          }
+        }
+        input[type="submit"] {
+          background: $lime-green;
+          color: $dark-blue;
+          font-family: $heading-font;
+          font-weight: 700;
+          text-transform: uppercase;
+          margin-top: 10px;
+          &:hover {
+            background: $light-blue;
+            cursor: pointer;
+            transition: $bg-transition;
+          }
+        }
+      }
+    }
+  }
+  /* COVID CTA */ 
+  #cta {
+    @include section-header;
+    background: #fff;
+    color: $dark-blue;
+    padding-bottom: 20px;
+    h1 {
+      background: $dark-blue;
+    }
+    p {
+      font-size: 1.25rem;
+      font-weight: 700;
+      line-height: 1.45rem;
+      text-align: center;
+    }
+    .button-container {
+      font-size: 1.25rem;
+    }
+    .rounded-blue-button {
+      @include body-blue-button;
+      border: 3px solid $light-blue;
+      padding: 10px 0px;
+      &:hover {
+        background: none;
+        border: 3px solid $dark-blue;
+      }
+    }
+    .rounded-green-button {
+      @include body-green-button;
+      border: 3px solid $lime-green;
+      margin-top: 10px;
+      padding: 10px 0px;
+      &:hover {
+        background: none;
+        border: 3px solid $dark-blue;
+      }
+    }
+  }
+  /* Our Impact */ 
+  #our-impact {
+    background: $dark-blue;
+    @include section-header;
+    .impact-content {
+      display: flex;
+      flex-direction: column;
+      article {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 100%;
+        height: 360px;
+        h2 {
+          color: $dark-blue;
+          font-size: 5rem;
+          font-weight: 700;
+          line-height: 5rem;
+          width: 80%;
+          margin: 0 auto;
+          padding-bottom: 50px;
+          span {
+            display: block;
+            font-weight: 600;
+            font-size: 1.65rem;
+            line-height: 1.65rem;
+          }
+        }
+        &:nth-of-type(1) {
+          background: center no-repeat url('img/stat_1.png');
+          background-size: cover;
+        }
+        &:nth-of-type(2) {
+          background: center no-repeat url('img/stat_2.png');
+          background-size: cover;
+        }
+        &:nth-of-type(3) {
+          background: center no-repeat url('img/stat_3.png');
+          background-size: cover;
+        }
+      }
+    }
+  }
+  /* Involvment Call to Action */ 
+  #involvement-cta {
+    @include section-header;
+    background: $dark-blue;
+    .involvement-cta-content {
+      background: #fff;
+      text-align: center;
+      &:hover {
+        background: #fff;
+      }
+      .content-wrapper {
+        @include fontawesome-icon;
+        padding: 25px 0px;
+      }
+      article {
+        img {
+          width: 150px;
+          height: 150px;
+          padding: 20px 0px;
+        }
+        h3 {
+          color: $dark-blue;
+          font-size: 1.95rem;
+          font-weight: 600;
+          line-height: 1.75rem;
+          margin-top: 10px;
+          span {
+            display: block;
+          }
+        }
+        p {
+          color: $dark-blue;
+          font-size: 1.25rem;
+          line-height: 1.35rem;
+        }
+      }
+    }
+  }
+  /* Home Delivered Meals Section */ 
+  #meals {
+    @include section-header;
+    .meals-content-container {
+      color: $dark-blue;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+    article {
+      @include fontawesome-icon;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      height: 300px;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 0px;
+      h4 {
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1.5rem;
+        margin-top: 10px;
+        span {
+          display: block;
+          font-size: 1.5rem;
+          font-weight: 400;
+        }
+      }
+      p {
+        margin: 0;
+        padding: 10px;
+        width: 300px;
+      }
+      ol {
+        li {
+          text-align: justify;
+        }
+      }
+    }
+    .rounded-blue-button {
+      @include body-blue-button;
+      border: 2px solid $light-blue;
+      &:hover {
+        background: none;
+        border: 2px solid $dark-blue;
+      }
+    }
+    .rounded-green-button {
+      @include body-green-button;
+      border: 2px solid $lime-green;
+      &:hover {
+        background: none;
+        border: 2px solid $dark-blue;
+      }
+    }
+  }
+  /* Footer */ 
+  footer {
+    background: $dark-blue;
+    color: #fff;
+    a:link,
+    a:visited {
+      color: #fff;
+      text-decoration: none;
+      &:hover {
+        color: $lime-green;
+        transition: .3s color;
+      }
+    }
+    .content-wrapper {
+      padding: 25px 0px;
+    }
+    .text-logo {
+      margin: 20px 20px;
+    }
+    h5 {
+      color: $lime-green;
+      font-size: 1rem;
+      line-height: 1rem;
+      text-align: left;
+      padding: 10px 0px;
+      span {
+        display: block;
+      }
+    }
+    h6 {
+      font-size: 1.6rem;
+      font-weight: 300;
+      text-align: left;
+    }
+    p {
+      font-size: .90rem;
+      margin: 8px 0px;
+    }
+    i {
+      margin-right: 10px;
+    }
+    .social-media {
+      text-decoration: none;
+      a:link,
+      a:visited {
+        color: $light-blue;
+      }
+      a:hover {
+        color: $lime-green;
+        transition: $color-transition;
+      }
+    }
+    .navigation {
+      h6 {
+        padding: 10px 0px;
+      }
+      line-height: 1rem;
+      p {
+        margin: 0px;
+      }
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+      a:link,
+      a:visited {
+        color: #fff;
+        font-size: .75rem;
+        text-decoration: none;
+      }
+      a:hover {
+        color: $lime-green;
+        transition: $color-transition;
+      }
+    }
+    img {
+      display: flex;
+      margin: auto;
+      width: 200px;
+    }
+  }
+  /* About Page > About MOWFNI */ 
+  #about-page-hero {
+    @include page-header;
+    .about-page-hero-content {
+      @include statistic-format;
+      display: flex;  
+      flex-flow: column wrap;
+      img {
+        width: 100%;
+      }
+      article {
+        background: $light-blue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        width: 100%;
+        h2 {
+          min-width: 280px;
+          max-width: 490px;
+        }
+        &:nth-of-type(1) {
+          background: center no-repeat url('img/about-mow-mission.png');
+          background-size: cover;
+        }
+        &:nth-of-type(2) {
+          background: center no-repeat url('img/about-mow-vision.png');
+          background-size: cover;
+        }
+      }
+    }
+  }
+  /* About Page > About Us > Our History Section */ 
+  #about-page-our-history {
+    @include page-header;
+    article {
+      background: #fff;
+      color: $dark-blue;
+      padding: 15px 0px;
+    }
+    .about-page-cta {
+      display: flex;
+      flex-flow: column wrap;
+      a:link,
+      a:visited {
+        border-bottom: none !important;
+      }
+      article {
+        background: $light-blue;
+        height: 275px;
+        .content-wrapper {
+          img {
+            width: 150px;
+            height: 150px;
+            margin: 0 auto;
+            padding: 25px 0px;
+          }
+          display: flex;
+          flex-flow: column wrap;
+          justify-content: center;
+          align-items: center;
+          h3 {
+            font-size: 1.5rem;
+            line-height: 1.5rem;
+          }
+        }
+        &:nth-of-type(2) {
+          background: $lime-green;
+        }
+      }
+    }
+  }
+  /* Board of Directors Page */ 
+#board-of-directors-page {
+  @include page-header;
+  width: 100%;
+  .board-of-directors-content {
+    background: $light-blue;
+    color: $dark-blue;
+    .content-wrapper {
+      display: flex;
+      flex-flow: column wrap;
+      article {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        align-items: center;
+        padding: 30px 0px;
+        width: 100%;
+        img {
+          width: 150px;
+          height: 150px;
+          border-radius: 100px;
+          margin: 0 auto;
+        }
+        h3 {
+          font-size: 1.75rem;
+          line-height: 1.75rem;
+          padding: 10px 0px;
+          span {
+            display: block;
+            font-size: 1.5rem;
+            line-height: 1.5rem;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+  }
+  .button-container {
+    margin: 20px;
+  }
+  .rounded-green-button {
+    @include body-green-button;
+  }
+}
+  /* Resources Page */ 
+#resources-page {
+  @include page-header;
+  @include other-ways-tabs;
+  @include button-container;
+  .button-container {
+    margin: 15px 0px;
+  }
+  .rounded-green-button {
+    @include body-green-button;
+  }
+  .other-ways-tabs {
+    .tab button {
+      text-transform: none;
+    }
+    .tabcontent {
+      background: #fff;
+      text-align: left;
+    }
+    .tab button.active {
+      background: #fff;
+    }
+    img.resource-no-background-logo {
+      background: $dark-blue;
+      margin-bottom: 10px;
+      padding: 20px;
+      width: 250px;
+    }
+  }
+  @media screen and (min-width: 992px) {
+    .other-ways-tabs {
+      .tab, .tabcontent {
+        height: 550px;
+      }
+    }
+  }
+  .resource-page-span {
+    background: center no-repeat url('img/hero.png');
+    background-size: cover;
+    height: 350px;
+    @include page-hero;
+  }
+  .resources-page-content {
+    background: #fff;
+    color: $dark-blue;
+    .content-wrapper {
+      article {
+        h3 {
+          text-transform: none;
+        }
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0px;
+        img {
+          width: 250px;
+        }
+      }
+    }
+  }
+}
+  #resources-additional-resources {
+    @include page-header;
+    .resources-additional-content {
+      background: #fff;
+      color: $dark-blue;
+      article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0px;
+        h3 {
+          padding: 20px 0px;
+        }
+      }
+    }
+    .content-wrapper {
+      img.resource-no-background-logo {
+        background: $dark-blue;
+        padding: 20px;
+        width: 250px;
+      }
+      img {
+        width: 250px;
+      }
+      img.resource-ssa {
+        width: 165px;
+        height: 165px;
+      }
+    }
+  }
+/* Donation Page */ 
+#donation-page {
+  @include page-header;
+  background: #fff;
+  color: $dark-blue;
+  .donation-span {
+    height: 300px;
+    background: top no-repeat url('img/about-hero.png');
+    background-size: cover;
+    h1 {
+      background: none;
+      color: #fff;
+      font-size: 2rem;
+      line-height: 2rem;
+      padding-top: 175px;
+      span {
+        color: #fff;
+        display: block;
+      }
+    }
+  }
+  .donation-page-content-container {
+    @include button-container;
+    padding-top: 20px;
+    .button-container {
+      margin-bottom: 20px;
+      .rounded-blue-button {
+        @include body-blue-button;
+      }
+      .rounded-green-button {
+        @include body-green-button;
+      }
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    .donation-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    h2 {
+      font-weight: 400;
+      text-transform: none;
+      padding-bottom: 20px;
+    }
+    .faq-container {
+      padding: 20px;
+      /* button used to open the question */
+      .accordion {
+        background: $lime-green;
+        color: $dark-blue;
+        cursor: pointer;
+        font-family: $heading-font;
+        font-weight: 700;
+        padding: 18px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+      }
+      /* add a background to the question if it's clicked on & when you move the mouse over it */
+      .active,
+      .accordion:hover {
+        background: $light-blue;
+        color: $dark-blue;
+      }
+      .accordion:after {
+        content: '\02795';
+        font-size: 13px;
+        color: $dark-blue !important;
+        float: right;
+        margin-left: 5px;
+      }
+      .active:after {
+        content: "\2796";
+        color: $dark-blue !important;
+      }
+      /* style the accordion panel; hidden by default */
+      .panel {
+        background: #fff;
+        padding: 0 18px;
+        color: $dark-blue;
+        display: none;
+        overflow: hidden;
+        text-align: left;
+      }
+    }
+  }
+  .donation-page-donor-support {
+    margin: 10px 0px;
+    padding: 10px 0px;
+    h1 {
+      background: $light-blue;
+    }
+    img {
+      width: 150px;
+      height: 150px;
+      border-radius: 100px;
+    }
+    a:link,
+    a:visited {
+      border-bottom: 2px solid $lime-green;
+      text-transform: none;
+      &:hover {
+        border-bottom: 2px solid $light-blue;
+      }
+    }
+    .button-container {
+      margin: 20px;
+      a:link,
+      a:visited {
+        text-transform: uppercase;
+        border-bottom: none;
+      }
+    }
+  }
+}
+#donation-page-gift-impact {
+  @include page-header;
+  background: #fff;
+  color: $dark-blue;
+  h2 {
+    background: $dark-blue;
+    color: #fff !important;
+  }
+    .donation-page-contribution-graph {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: center;
+      align-items: flex-start;
+      width: 100%;
+      height: 600px;
+      aside.contribution-programs {
+        background: center no-repeat url('img/filler-images/new-filler-img-01.png');
+        background-size: cover;
+        width: 100%;
+        height: 300px;
+      }
+      aside.contribution-fundraising {
+        background: center no-repeat url('img/filler-images/new-filler-img-03.png');
+        background-size: cover;
+        height: 180px;
+        width: 100%;
+      }
+      aside.contribution-admin {
+        background: center no-repeat url('img/filler-images/new-filler-img-02.png');
+        background-size: cover;
+        height: 150px;
+        width: 100%;
+      }
+      aside {
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: flex-end;
+        h3 {
+          color: $dark-blue;
+          font-size: 4rem;
+          line-height: 2.75rem;
+          padding-bottom: 25px;
+          span {
+            display: block;
+            font-size: 1.75rem;
+            line-height: 1.75rem;
+          }
+        }
+      }
+    }
+  h2 {
+    color: $dark-blue;
+    font-weight: 700;
+    padding: 10px 0px;
+    span {
+      color: $lime-green;
+      display: block;
+    }
+  }
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    img {
+      padding: 25px 0px;
+      width: 80%;
+    }
+    p {
+      text-align: justify;
+    }
+    .button-container {
+      @include button-container;
+      width: 100%;
+      margin-bottom: 20px;
+      .rounded-green-button {
+        @include body-green-button;
+      }
+    }
+  }
+}
+/* Donate Page Corporate Giving */ 
+#donation-page-corporate-giving {
+  @include page-header;
+  .donation-page-corporate-container {
+    aside img {
+      width: 100%;
+    }
+    h2 {
+      padding: 20px 0px;
+    }
+    .faq-container {
+      padding: 0px 20px 20px 20px;
+      /* button used to open the question */
+      .accordion {
+        background: $lime-green;
+        color: $dark-blue;
+        cursor: pointer;
+        font-family: $heading-font;
+        font-weight: 700;
+        padding: 18px;
+        width: 100%;
+        text-align: left;
+        border: none;
+        outline: none;
+        transition: 0.4s;
+      }
+      /* add a background to the question if it's clicked on & when you move the mouse over it */
+      .active,
+      .accordion:hover {
+        background: #fff;
+        color: $dark-blue;
+      }
+      .accordion:after {
+        content: '\02795';
+        font-size: 13px;
+        color: $dark-blue !important;
+        float: right;
+        margin-left: 5px;
+      }
+      .active:after {
+        content: "\2796";
+        color: $dark-blue !important;
+      }
+      /* style the accordion panel; hidden by default */
+      .panel {
+        
+        padding: 0 18px;
+        background: #fff;
+        color: $dark-blue;
+        display: none;
+        overflow: hidden;
+      }
+    }
+  }
+}
+/* Additional Support */ 
+#donation-page-additional-support {
+  @include page-header;
+  .additional-support-container {
+    display: flex;
+    flex-direction: column;
+    aside  {
+      width: 100%;
+      height: 300px;
+      &:nth-of-type(odd) {
+        background: top center no-repeat url('img/filler-square-01.png');
+        background-size: cover;
+      }
+      &:nth-of-type(even) {
+        background: top center no-repeat url('img/filler-square-03.png');
+        background-size: cover;
+      }
+    }
+  }
+  .content-wrapper {
+    margin-top: 16px;
+  }
+  .donation-page-giving-options,
+  .donation-page-donor-support {
+    background: #fff;
+    color: $dark-blue;
+    p {
+      text-align: justify;
+    }
+    i {
+      background: $dark-blue;
+      color: $lime-green;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      height: 100px;
+      text-align: center;
+      border-radius: 100px;
+      margin: 0 auto;
+    }
+    .button-container {
+      background: $dark-blue;
+      padding: 20px;
+      .rounded-blue-button {
+        @include body-blue-button;
+      }
+    }
+  }
+
+  .donor-support-icons {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    align-items: center;
+    img {
+      width: 100px;
+      height: 100px;
+      border-radius: 100px;
+      margin: 0 auto;
+    }
+  }
+}
+#donation-page-cta {
+  @include page-header;
+  @include cta-stats;
+}
+  /* Other Ways To Give Page */ 
+#other-ways-page {
+  @include page-header;
+  @include fontawesome-icon;
+  @include other-ways-tabs;
+  h3 {
+    padding-top: 20px;
+  }
+  article {
+    p {
+      @include body-content-wrapper;
+    }
+  }
+  article.other-ways-desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    color: $dark-blue;
+    text-align: justify;
+    padding-bottom: 20px;
+    p:first-of-type { 
+      padding-top: 20px;
+    }
+    .multi-button-container {
+      display: flex;
+      flex-direction: column;
+      .button-container {
+        @include button-container;
+        padding-top: 20px;
+        .rounded-green-button {
+          @include body-green-button;
+        }
+        .rounded-blue-button {
+          @include body-blue-button;
+        }
+      }
+    }
+  }
+  .other-ways-span {
+    background: center no-repeat url('img/filler-square-04.png');
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    h1 {
+      background: none;
+      color: #fff;
+      font-size: 3rem;
+      line-height: 2.5rem;
+      padding-top: 90px;
+      span {
+        color: #fff;
+        display: block;
+      }
+    }
+  }
+  .other-ways-content {
+    background: $light-blue;
+    color: $dark-blue;
+    padding: 20px 0px;
+    h3 {
+      @include body-content-wrapper;
+      font-size: 1.75rem;
+      line-height: 1.75rem;
+      padding: 25px 0px;
+      span {
+        display: block;
+      }
+    }
+    article {
+      padding: 20px 0px;
+      i {
+        background: $dark-blue;
+        border-radius: 100px;
+        color: $lime-green;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 150px;
+        height: 150px;
+        margin: 0 auto;
+      }
+      p {
+        text-align: justify;
+      }
+    }
+  }
+  .other-ways-disclaimer {
+    background: #fff;
+    color: $dark-blue;
+    padding: 20px 0px;
+  }
+  .tablinks {
+    text-transform: none !important;
+  }
+}
+  /* Current Events Page */
+  #current-events-page {
+    @include page-header;
+    .current-events-page-content {
+      background: #fff;
+      color: $dark-blue;
+      padding: 20px 0px;
+    }
+    .current-events-page-span {
+      @include page-hero;
+      background: center no-repeat url('img/filler-square-04.png');
+      background-size: cover;
+    }
+  }
+  /* Past Events Page */ 
+  #past-events-page {
+    @include page-header;
+    .past-events-page-span {
+      @include page-hero;
+      background: center no-repeat url('img/filler-square-03.png');
+      background-size: cover;
+    }
+    .past-events-desc {
+      background: #fff;
+      color: $dark-blue;
+      padding: 20px;
+      margin: 0px;
+    }
+    .past-events-page-content {
+      background: #fff;
+      color: $dark-blue;
+      padding: 20px 0px;
+      .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+      }
+      article {
+        background: $dark-blue;
+        color: #fff;
+        display: flex;
+        flex-direction: column;
+        width: 280px;
+        min-height: 375px;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        h3 {
+          color: $light-blue;
+        }
+        i {
+          color: $lime-green;
+          padding: 20px 0px;
+        }
+        .event-photo {
+          width: 100%;
+          height: 200px;
+        }
+        p {
+          margin: 5px 0px;
+        }
+        .button-container {
+          @include button-container;
+          padding: 10px 0px;
+          .wp-block-button__link {
+            @include body-green-button;
+            color: $dark-blue;
+            text-transform: uppercase;
+            font-family: $heading-font;
+            font-weight: 700;
+          }
+          .rounded-green-button {
+            @include body-green-button;
+          }
+        }
+      }
+    }
+  }
+  /* Single Event Page */ 
+  #single-event-page-hero {
+    @include page-header;
+    padding-top: 75px;
+    .single-event-span {
+      @include page-hero;
+      background: center no-repeat url('img/filler-square-04.png');
+      background-size: cover;
+    }
+  }
+  #single-event-page-desc {
+    @include page-header;
+    background: #fff;
+    color: $dark-blue;
+    p {
+      margin: 0;
+      text-align: justify;
+      padding-top: 10px;
+      &:nth-last-of-type(1) {
+        padding-bottom: 20px;
+      }
+    }
+  }
+  #single-event-page-gallery {
+    .gallery-container {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+      padding: 20px 0px;
+      article {
+        width: 50%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+/* Volunteer Page */ 
+#volunteer-page-hero {
+  @include page-header;
+  background: #fff;
+  color: $dark-blue;
+  .volunteer-page-span {
+    @include page-hero;
+    background: top no-repeat url('../img/volunteer-hero.png');
+    background-size: cover;
+  }
+  .content-wrapper {
+    p {
+      text-align: justify;
+      margin: 0;
+      padding: 15px 0px;
+    }
+  }
+  .volunteer-page-hero-content {
+    .volunteer-page-slider-container {
+      width: 100%;
+    }
+  }
+  .volunteer-page-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    article {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h2 {
+        font-size: 2rem;
+        line-height: 2rem;
+      }
+      h3 {
+        font-size: 2rem;
+        line-height: 2rem;
+      }
+      &:nth-of-type(1) {
+        background: $light-blue;
+        width: 100%;
+        height: 120px;
+        a:link,
+        a:visited {
+          border-bottom: none;
+        }
+      }
+      &:nth-of-type(2) {
+        background: $lime-green;
+        width: 100%;
+        height: 120px;
+      }
+      a:link,
+      a:visited {
+        text-decoration: none;
+        &:hover {
+          border-bottom: none;
+        }
+      }
+      &:hover {
+        opacity: .75;
+        transition: 1s opacity;
+      }
+    }
+  }
+}
+#volunteer-page-opportunities {
+  @include page-header;
+  background: #fff;
+  color: $dark-blue;
+  .volunteer-page-opportunities-container {
+      @include fontawesome-icon;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 100%;
+        height: 350px;
+        h2 {
+          font-size: 2rem;
+          line-height: 2rem;
+        }
+        h3 {
+          font-size: 2rem;
+          line-height: 2rem;
+          margin: 0px;
+        }
+        a:link,
+        a:visited {
+          text-decoration: none;
+          &:hover {
+            border-bottom: none;
+          }
+        }
+      }
+    h3 {
+      margin-top: 15px;
+    }
+    aside {
+      padding: 20px 0px;
+      width: 100%;
+    }
+  }
+}
+#volunteer-page-locations {
+  @include page-header;
+  background: #fff;
+  color: $dark-blue;
+  padding: 0px;
+  margin: 0px;
+  .button-container {
+    @include button-container;
+    padding: 20px;
+    margin: 0 auto;
+    .rounded-blue-button {
+      @include body-blue-button;
+    }
+  }
+  .volunteer-page-service-area {
+    display: flex;
+    flex-direction: column;
+  }
+}
+#volunteer-page-cta {
+  @include page-header;
+  @include cta-stats;
+  .button-container {
+    @include button-container;
+    font-size: 1.5rem;
+    margin: 20px;
+    .rounded-blue-button {
+      @include body-blue-button;
+    }
+  }
+  .impact-content {
+    article {
+      h2 {
+        font-size: 4rem;
+        line-height: 4rem;
+      }
+    }
+  }
+}
+#volunteer-page-corporate {
+  @include page-header;
+  background: #fff;
+  color: $dark-blue;
+  padding-bottom: 20px;
+}
+/* Get Involved Page */ 
+#get-involved-page-hero {
+  @include page-header;
+  padding-top: 75px;
+  .volunteer-page-span {
+    @include page-hero;
+    background: top no-repeat url('../img/volunteer-hero.png');
+    background-size: 100%;
+  }
+}
+#get-involved-page-other-ways {
+  @include page-header;
+  @include other-ways-tabs;
+  @include fontawesome-icon;
+  h2 {
+    padding: 20px;
+    font-weight: 700;
+  }
+  h3 {
+    padding-top: 20px;
+  }
+  .button-container {
+    @include button-container;
+    margin: 20px;
+  }
+  .rounded-blue-button {
+    @include body-blue-button;
+  }
+}
+#get-involved-page-cta {
+  @include page-header;
+  background: #fff;
+  color: $dark-blue;
+  p {
+    margin: 0;
+    padding: 5px 0px;
+    text-align: justify;
+  }
+  .get-involved-cta-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    article {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      height: 350px;
+      a:link,
+      a:visited {
+        border-bottom: none;
+      }
+      h2 {
+        font-size: 3rem;
+        line-height: 3rem;
+      }
+      h3 {
+        font-size: 3rem;
+        line-height: 3rem;
+      }
+      &:nth-of-type(1) {
+        background: center no-repeat url('img/filler-square-01.png');
+        background-size: cover;
+      }
+      &:nth-of-type(2) {
+        background: center no-repeat url('img/filler-square-03.png');
+        background-size: cover;
+      }
+      a:link,
+      a:visited {
+        text-decoration: none;
+        &:hover {
+          border-bottom: none;
+        }
+      }
+      &:hover {
+        opacity: .75;
+        transition: 1s opacity;
+      }
+    }
+  }
+}
+  /* About Meals On Wheels Page */ 
+  #about-mow-page-hero {
+    @include page-header;
+    .about-mow-page-hero-content {
+      @include page-hero;
+      background: center no-repeat url('img/about-mow-hero.png');
+      background-size: cover;
+      padding-top: 75px;
+    }
+  }
+  #about-mow-page-locations {
+    @include page-header;
+    .about-mow-page-programs-application {
+      @include fontawesome-icon;
+      @include secondary-page-header;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding-bottom: 20px;
+      p {
+        margin: 0;
+        padding: 0px 20px;
+        text-align: justify;
+      }
+      .ccu-info {
+        color: $dark-blue;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px 0px;
+        img {
+          width: 100%;
+          margin: 0 auto;
+        }
+        p {
+          padding: 0px;
+
+        }
+      }
+      .button-container {
+        width: 300px;
+        margin: 0 auto;
+        .rounded-green-button {
+          @include body-green-button;
+        }
+      }
+    }
+    .about-mow-page-locations-content {
+      background: #fff;
+      color: $dark-blue;
+      .map {
+        background: $light-blue;
+        width: 100%;
+        h3 {
+          padding-top: 50px;
+        }
+      }
+      .about-mow-page-programs {
+        @include secondary-page-header;
+        h1 {
+          background: $dark-blue;
+          color: #fff;
+        }
+          display: flex;
+          flex-direction: column;
+          .about-mow-page-programs-span {
+            @include fontawesome-icon;
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            padding: 30px 0px;
+            &:nth-of-type(even) {
+              background: $light-blue;
+            }
+            p {
+              margin: 0;
+              padding: 0px 20px;
+              text-align: justify;
+            }
+            .ccu-info {
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              padding: 10px 0px;
+              img {
+                width: 100%;
+                margin: 0 auto;
+              }
+              p {
+                padding: 0px;
+      
+              }
+            }
+            .button-container {
+              width: 300px;
+              margin: 0 auto;
+              .rounded-green-button {
+                @include body-green-button;
+              }
+            }
+          }   
+      }
+      .map-locations {
+        p {
+          text-align: justify;
+        }
+        .map-locations-container {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          align-items: center;
+          padding-top: 20px;
+          aside {
+            width: 100%;
+            padding-bottom: 25px;
+            .content-wrapper {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              div {
+                width: 100%;
+              }
+              .location-more-info {
+                font-size: .80rem;
+                i.fas.fa-location-arrow {
+                  font-size: .55rem;
+                }
+                a {
+                  margin-right: 3px;
+                }
+                i {
+                  margin: 0px 2.5px;
+                }
+              }
+            }
+            h3 {
+              font-size: 1rem;
+              text-transform: uppercase;
+              line-height: 1.25rem;
+              margin: 0;
+              span {
+                display: block;
+                font-weight: 300;
+                line-height: 1.20rem;
+                text-transform: none;
+              }
+            }
+            .pick-up-time {
+              padding-bottom: 10px;
+            }
+            p {
+              line-height: 1.25rem;
+              margin: 0;
+              padding-bottom: 10px;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+  }
+  /* About MOW Page Volunteer Section */ 
+  #about-mow-page-volunteer {
+    @include page-header;
+    background: #fff;
+    color: $dark-blue;
+    p {
+      text-align: justify;
+    }
+    h1 {
+      background: $dark-blue;
+      color: #fff;
+    }
+    .about-mow-page-volunteer-container {
+      @include secondary-page-header;
+      @include fontawesome-icon;
+      display: flex;
+      flex-direction: column;
+      aside {
+        padding: 30px 0px;
+        &:nth-of-type(1) {
+          background: $lime-green;
+        }
+        &:nth-of-type(2) {
+          background: $light-blue;
+        }
+        p {
+          margin: 0;
+          padding-bottom: 5px;
+        }
+        a:link,
+        a:visited {
+          &:hover {
+            border-bottom: 2px solid $lime-green;
+          }
+        }
+      }
+    }
+    .button-container {
+      @include button-container;
+      background: $dark-blue;
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      padding: 20px;
+      .rounded-green-button {
+        @include body-green-button;
+      }
+    }
+  }
+/* Single MOW Location/Township Page */ 
+#single-mow-location-page {
+  @include page-header;
+  @include secondary-page-header;
+  h2 {
+    background: $light-blue;
+  }
+  .single-mow-location-page-content {
+    display: flex;
+    flex-direction: column-reverse;
+    .single-mow-location-page-map {
+      background: $dark-blue;
+      color: #fff;
+      width: 100%;
+      h1 {
+        background: $dark-blue;
+        color: #fff;
+      }
+    }
+    .single-mow-location-page-meal-pickup {
+      background: #fff;
+      color: $dark-blue;
+      width: 100%;
+      padding-bottom: 25px;
+      h2 {
+        font-size: 2rem;
+        width: 100%;
+      }
+      h3 {
+        padding: 5px 20px;
+        text-align: left;
+        &:nth-of-type(1) {
+          padding-top: 20px;
+        }
+      }
+      p {
+        margin: 0;
+        padding: 0px 20px;
+      }
+    }
+  }
+}
+/* Single MOW Location Page Additional Info */ 
+#single-mow-location-page-additional-info {
+  .single-mow-location-page-additional-info-container {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    article {
+      @include fontawesome-icon;
+      background: #fff;
+      color: $dark-blue;
+      padding: 30px 0px;
+      .content-wrapper {
+        .rounded-blue-button {
+          @include body-blue-button;
+          &:hover {
+            border: none !important;
+          }
+        }
+      }
+      .ccu-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        img {
+          width: 100%;
+          padding: 10px 0px;
+        }
+        p {
+          padding: 0px;
+        }
+      }
+      h2 {
+        font-weight: 700;
+        padding-bottom: 15px;
+      }
+      p {
+        margin: 0;
+        padding: 5px 0px;
+      }
+      ol {
+        margin: 0;
+        padding-bottom: 10px;
+      }
+      h3 {
+        text-align: left;
+      }
+      .button-container {
+        margin-top: 10px;
+        padding: 20px;
+        .rounded-green-button {
+          @include body-green-button;
+          &:hover {
+            border: none !important;
+          }
+        }
+        .rounded-blue-button {
+          @include body-blue-button;
+          &:hover {
+            border: none !important;
+          }
+        }
+      }
+    }
+  }
+}
+  /* subaru share the love page */ 
+  #subaru-event-page {
+    @include page-header;
+    background: #fff;
+    color: $dark-blue;
+    .subaru-event-page-hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      img {
+        width: 100%;
+      }
+    }
+    .subaru-event-page-stats {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      a:link,
+      a:visited {
+        border-bottom: none;
+      }
+      img.subaru-event-stat-photo-one {
+        width: 100%;
+      }
+      img.subaru-event-stat-photo-two {
+        width: 100%;
+      }
+    }
+    .subaru-event-page-desc {
+      display: flex;
+      flex-direction: column;
+      .content-wrapper {
+        padding: 10px 0px;
+        span {
+          color: $light-blue;
+          font-weight: bold;
+        }
+      }
+      img {
+        width: 280px;
+        margin: 0 auto;
+      }
+    }
+    .button-container {
+      @include button-container;
+      @include body-blue-button;
+      margin: 10px;
+    }
+  }
+  /* Large Tablets & Desktop Styles */ 
+  @media screen and (min-width: 992px) {
+    /* Universal Styles */ 
+    body {
+      font-size: 18px;
+      line-height: 1.5rem;
+    }
+    .header-desktop-adjust {
+      margin-top: 25px;
+    }
+    /* Hero Section */ 
+    #hero {
+      background: center no-repeat url('img/hero.png');
+      background-size: 100%;
+      margin-top: 75px;
+      padding-top: 50px;
+      .content-wrapper {
+        padding-top: 125px;
+      }
+      h1 {
+        font-size: 3.44rem;
+        line-height: 3.25rem;
+        span {
+          font-size: 3.79rem;
+        }
+      }
+      .rounded-green-button {
+        font-size: 1.5rem;
+        min-width: 190px;
+        max-width: 200px;
+        padding: 10px 30px;
+      }
+    }
+    /* Newsletter */
+    #newsletter {
+      .content-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: baseline;
+        aside {
+          width: 100% !important; 
+        }
+        .ctct-inline-form {
+          padding: 0;
+          margin: 0;
+        }
+        .ctct-form-custom {
+          width: 100%;
+        }
+        .ctct-form-defaults {
+          margin: 0;
+          padding: 0;
+        }
+      }
+      .newsletter-container {
+        h2, h3 {
+          line-height: 2.4rem;
+        }
+        h2 {
+          font-size: 1.85rem;
+        }
+        h3 {
+          font-size: 2.85rem;
+        } 
+      }
+    }
+    /* COVID CTA */ 
+    #cta {
+      h1 {
+        font-size: 3rem;
+      }
+      p {
+        font-size: 1.89rem;
+        line-height: 1.85rem;
+        width: 650px;
+        margin: auto;
+        padding: 25px 0px;
+      }
+      .options-container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 650px;
+        margin: auto;
+        padding-bottom: 25px;
+      }
+      .rounded-blue-button {
+        font-size: 2rem;
+        padding: 10px 60px;
+      }
+      .rounded-green-button {
+        font-size: 2rem;
+        margin-top: 0px;
+        padding: 10px 60px;
+      }
+    }
+    /* Our Impact section */ 
+    #our-impact {
+      .impact-content {
+        display: flex;
+        flex-flow: row nowrap;
+        article {
+          width: 33.3%;
+          h2 {
+            span {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+    /* Involvment Call to Action */ 
+    #involvement-cta {
+      .involvement-cta-content {
+        .content-wrapper {
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-evenly;
+          align-items: center;
+        }
+        article {
+          width: 35%;
+        }
+      }
+    }
+    /* Home Delivered Meals Section */ 
+    #meals {
+      .meals-content-container {
+        display: flex;
+        flex-flow: row wrap;
+        article {
+          @include fontawesome-icon;
+          background: #fff;
+          width: 50%;
+          height: 300px;
+          p {
+            width: 80%;
+          }
+        }
+      }
+    }
+    /* Footer */ 
+    footer {
+      .text-logo {
+        margin: 20px;
+      }
+      .content-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+      }
+      p {
+        font-size: 1rem;
+      }
+      article.image-footer-logo {
+        padding-top: 100px;
+      }
+      .navigation {
+        a:link,
+        a:visited {
+          font-size: 1rem;
+          line-height: 1.20rem;
+        }
+      }
+    }
+    /* About Page > About Us Section */ 
+    #about-page-hero {
+      .about-page-hero-content {
+        display: flex;
+        flex-flow: row nowrap;
+      }
+    }
+    .our-history-container {
+        display: flex;
+        flex-flow: row nowrap;
+        article.main-content {
+          width: 99%;
+        }
+        .about-page-cta {
+         width: 250px;
+        }
+    }
+    /* Board of Directors Page */ 
+    #board-of-directors-page {
+      .board-of-directors-container {
+        background: $light-blue;
+        display: flex;
+        flex-direction: row;
+        .button-container {
+          background: $dark-blue;
+          line-height: 1.25rem;
+          margin: 0px;
+          margin-top: 100px;
+          padding: 20px;
+          width: 280px;
+          height: 75px;
+        }
+        .board-of-directors-content {
+          padding: 50px 0px;
+          .content-wrapper {
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+            article {
+              width: 33%;
+            }
+          }
+        }
+      }
+    }
+  /* Resources Page */ 
+  #resources-page {
+    .resources-page-content {
+      .content-wrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        article {
+          width: 40%;
+        }
+      }
+    }
+  }
+    #resources-additional-resources {
+      .resources-additional-content {
+        .content-wrapper {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: space-around;
+          align-items: flex-start;
+          article {
+            width: 40%;
+            padding: 20px 0px;
+            h3 {
+              text-transform: none;
+            }
+          }
+        }
+      }
+    }
+  /* Donation Page */ 
+  #donation-page {
+    .donation-span {
+      height: 350px;
+      h1 {
+        font-size: 3rem;
+        line-height: 3rem;
+        padding-top: 200px;
+      }
+    }
+    .donation-page-content-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: flex-start;
+      .donation-container {
+        width: 400px !important;
+      }
+      .faq-and-desc {
+        width: 100%;
+        h2 {
+          padding-bottom: 20px;
+        }
+        h1 {
+          background: none;
+          padding: 10px 0px;
+        }
+      }
+      .donation-page-donor-support {
+        background: #fff;
+        width: 55%;
+        margin: 0 auto;
+      }
+    }
+    .content-wrapper {
+      h2 {
+        font-size: 2rem;
+        line-height: 2rem;
+        min-width: 700px;
+        max-width: 710px;
+        margin: 0 auto;
+      }
+      .donation-container {
+        margin: 0 auto;
+        padding-left: 60px;
+      }
+    }
+  }
+  #donation-page-gift-impact {
+    .donation-page-contribution-graph {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: center;
+      align-items: flex-start;
+      aside.contribution-programs {
+        width: 55% !important;
+        height: 600px !important;
+      }
+      aside.contribution-fundraising {
+        width: 22.5% !important;
+        height: 600px !important;
+      }
+      aside.contribution-admin {
+        width: 22.5% !important;
+        height: 600px !important;
+      }
+    }
+  }
+  #donation-page-corporate-giving {
+    .donation-page-corporate-container {
+      display: flex;
+      flex-flow: row nowrap;
+      aside {
+        width: 40%;
+        img {
+          height: 100%;
+        }
+      }
+      article {
+        width: 60%;
+      }
+    }
+    .button-container {
+      @include button-container;
+      margin: 20px;
+      .rounded-blue-button {
+        @include body-blue-button;
+      }
+    }
+  }
+    /* Other Ways to Donate Page */ 
+  #other-ways-page {
+    article.other-ways-desc {
+      display: flex;
+      flex-flow: row nowrap;
+      height: 275px;
+      padding: 0px;
+      p:first-of-type {
+        padding: 0px;
+      }
+      .other-ways-span {
+        width: 30%;
+        height: 275px;
+        h1 {
+          display: none;
+        }
+      }
+      .other-ways-desc-content {
+        width: 50%;
+      }
+      .multi-button-container {
+        width: 20%;
+        padding: 0px 20px;
+      }
+    }
+    .other-ways-content {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      article {
+        width: 30%;
+        padding: 50px 0px;
+      }
+    }
+    .other-ways-tabs {
+      display: flex;
+      flex-direction: column;
+      .tab-button-container {
+        width: 100%;
+        .tab {
+          display: flex;
+          flex-direction: row;
+          width: 100%;
+          height: 50px;
+        }
+      }
+      .tab-content-container {
+        width: 100%;
+        height: 300px;
+        overflow: hidden;
+      }
+    }
+  }
+    /* Current Events Page */
+    #current-events-page {
+      .current-events-page-span {
+        height: 350px;
+      }
+    }
+    /* Past Events Page */
+    #past-events-page {
+      .past-events-page-content {
+        .content-wrapper {
+          display: flex;
+          flex-flow: row wrap;
+          justify-content: space-evenly;
+          article {
+            margin: 30px 0px;
+          }
+        }
+      }
+    }
+  /* Volunteer Page */
+  #volunteer-page-hero {
+    .volunteer-page-hero-content {
+      display: flex;
+      flex-flow: row wrap;
+    }
+    .button-container {
+      .rounded-green-button {
+        min-width: 400px;
+        max-width: 410px;
+      }
+    }
+    .volunteer-page-options {
+      display: flex;
+      flex-flow: row nowrap;
+      width: 100%;
+      article {
+        &:nth-of-type(1) {
+          width: 50%;
+          height: 100px;
+        }
+        &:nth-of-type(2) {
+          width: 50%;
+          height: 100px;
+        }
+      }
+    }
+  }
+  #volunteer-page-opportunities {
+    .volunteer-page-opportunities-container {
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 0px;
+      aside {
+        width: 25%;
+        height: 500px;
+        i {
+          margin-top: 40px;
+        }
+      }
+    }
+  }
+  /* Volunteer Page Service Area */ 
+  #volunteer-page-locations {
+    .volunteer-page-service-area {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      .volunteer-page-locations-container {
+        width: 75%;
+      }
+    }
+  }
+    /* Get Involved Page */ 
+    #get-involved-page-cta {
+      .get-involved-cta-container {
+        display: flex;
+        flex-flow: row nowrap;
+        article {
+          width: 50%;
+          height: 450px;
+        }
+      }
+    }
+    /* Donate Page */
+    #donation-page-gift-impact {
+      .content-wrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        article {
+          width: 40%;
+          justify-content: center;
+          align-items: center;
+          padding: 20px 0px;
+        }
+      }
+    }
+    /* About Meals On Wheels page */
+    #about-mow-page-locations {
+      .about-mow-page-programs-application {
+        .ccu-info {
+          img {
+            width: 90%;
+          }
+          display: flex;
+          flex-direction: row;
+        }
+      }
+      /* width */
+      ::-webkit-scrollbar {
+        width: 10px;
+      }
+      /* Track */
+      ::-webkit-scrollbar-track {
+        background: $dark-blue;
+      }
+      /* Handle */
+      ::-webkit-scrollbar-thumb {
+        background: $light-blue;
+      }
+      /* Handle on hover */
+      ::-webkit-scrollbar-thumb:hover {
+        background: $lime-green;
+      }
+      .about-mow-page-locations-content {
+        display: flex;
+        flex-flow: row-reverse wrap;
+        justify-content: space-around;
+        .map {
+          width: 55%;
+          height: 600px;
+        }
+        .map-locations {
+          width: 45%;
+          height: 600px;
+          overflow-y: scroll;
+          overflow-x: hidden;
+          .map-locations-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            aside {
+              width: 100%;
+              .content-wrapper {
+                display: flex;
+                flex-direction: row;
+                align-items: flex-start;
+                justify-content: space-between;
+                text-align: center;
+                div:nth-of-type(1) {
+                  width: 45%;
+                }
+                div:nth-of-type(2) {
+                  width: 25%;
+                }
+                div:nth-of-type(3) {
+                  width: 25%;
+                }
+              }
+            }
+          }
+        }
+        .about-mow-page-programs {
+          display: flex;
+          flex-flow: row wrap;
+          .about-mow-page-programs-span {
+            justify-content: stretch;
+            align-items: stretch;
+            h2 {
+              font-size: 2rem;
+              line-height: 2rem;
+              span {
+                display: block;
+              }
+            }
+            p {
+              padding: 0px 100px;
+            }
+            &:nth-of-type(1) {
+              background: $lime-green;
+              flex-basis: 50%;
+            }
+            &:nth-of-type(2) {
+              flex-basis: 50%;
+            }
+            &:nth-of-type(3) {
+              background: #fff;
+              flex-basis: 100%;
+            }
+            .ccu-info {
+              img {
+                width: 90%;
+              }
+              display: flex;
+              flex-direction: row;
+            }
+          }
+        }
+      }
+    }
+    /* About MOW Page Volunteer Section */ 
+    #about-mow-page-volunteer {
+      .about-mow-page-volunteer-container {
+        display: flex;
+        flex-direction: row;
+        aside {
+          width: 50%;
+          h2 {
+            font-size: 2rem;
+            line-height: 2rem;
+            span {
+              display: block;
+            }
+          }
+          p {
+            padding: 0px 100px;
+          }
+        }
+      }
+    }
+    /* Single location page */ 
+    #single-mow-location-page {
+      .single-mow-location-page-content {
+        display: flex;
+        flex-direction: row;
+        .single-mow-location-page-map {
+          width: 70%;
+        }
+        .single-mow-location-page-meal-pickup {
+          width: 30%;
+        }
+      }
+    }
+    /* Single MOW Location Page Additional Info Section */
+    #single-mow-location-page-additional-info {
+      .single-mow-location-page-additional-info-container {
+        background: #fff;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        article {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 50%;
+          .ccu-info {
+            img {
+              width: 90%;
+            }
+            display: flex;
+            flex-direction: row;
+          }
+        }
+      }
+    }
+    #annual-report-page-template {
+      .annual-report-page-container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        aside {
+          margin: 160px 0px 0px 30px;
+        }
+      }
+    }
+    #suggestion-box-popover {
+      padding: 0px !important;
+      visibility: visible;
+      .suggestion-box-popover-content {
+        background: $light-blue;
+        width: 25px;
+        top: 200px;
+        left: 0px;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+          a:link,
+          a:visited {
+            background: $light-blue;
+            color: $dark-blue;
+            font-family: $heading-font;
+            font-size: 1rem;
+            font-weight: 700;
+            padding: 5px !important;
+            text-decoration: none;
+            text-transform: uppercase;
+            &:hover {
+              background: $lime-green;
+              border-bottom: none !important;
+              transition: .3s background-color;
+            }
+          }
+          button {
+            background: $light-blue;
+            border: none;
+            color: $dark-blue;
+            font-family: $heading-font;
+            font-size: .75rem;
+            font-weight: 900;
+            padding: 5px;
+            width: 35px;
+            &:hover {
+              background: $lime-green;
+              cursor: pointer;
+              transition: .3s background-color;
+            }
+          }
+      }
+    }
+    #popover {
+      padding: 0px !important;
+      visibility: visible;
+      .popover-content {
+        border-radius: 15px 0px 0px 15px;
+        width: 325px;
+        height: 170px;
+        right: 0px;
+        padding: 0px !important;
+        .content-wrapper {
+          h1 {
+            font-size: 1.75rem;
+            line-height: 1.65rem;
+            margin-top: -20px !important;
+          }
+          h2 {
+            padding-bottom: 10px;
+          }
+          .donation-form-container {
+            width: 240px;
+            margin: 0 auto;
+            .donation-form-filler {
+              width: 23px;
+            }
+          }
+        }
+
+      }
+    }
+    #hidden-donation-page-template {
+      .donation-page-content-container {
+          display: flex;
+          flex-direction: row !important;
+        .donation-container {
+          width: 400px !important;
+        }
+        aside {
+          width: 45%;
+        }
+        article {
+          width: 40%;
+        }
+      }
+      .content-wrapper {
+        h2 {
+          font-size: 2rem;
+          line-height: 2rem;
+          min-width: 700px;
+          max-width: 710px;
+          margin: 0 auto;
+        }
+        .donation-container {
+          margin: 0 auto;
+          padding-left: 60px;
+        }
+      }
+    }
+    .topbar {
+      background: #000;
+      color: #fff;
+      display: block;
+      font-family: $heading-font;
+      font-size: .75rem;
+      height: 25px;
+      padding: 5px;
+      position: fixed;
+      text-align: center;
+      top: 0;
+      width: 100%;
+      z-index: 9999 !important;
+      a:link,
+      a:visited {
+        color: $lime-green;
+        border-bottom: 1px solid $light-blue;
+        font-weight: 500;
+        text-decoration: none;
+        &:hover {
+          color: #fff;
+          transition: 1s color;
+        }
+      }
+      button {
+        background: #000;
+        border: none;
+        color: $lime-green;
+        font-size: .65rem;
+        font-weight: 700;
+        margin-left: 5px;
+        &:hover {
+          color: #fff;
+          cursor: pointer;
+          transition: 1s color;
+        }
+      }
+    }
+    .hide-topbar {
+      display: none;
+    }
+    .adjust-height {
+      margin-top: 0px;
+    }
+    #subaru-event-page {
+      .subaru-event-page-stats {
+        display: flex;
+        flex-direction: row !important;
+        .subaru-event-stat-photo-one {
+          width: 50% !important;
+        }
+        .subaru-event-stat-photo-two {
+          width: 100% !important;
+          opacity: 1;
+          &:hover {
+            cursor: pointer;
+            opacity: .5;
+            transition: .3s opacity;
+          }
+        }
+      }
+      .subaru-event-page-desc {
+        width: 75%;
+        display: flex;
+        flex-direction: row;
+        margin: 0 auto;
+        padding: 20px 0px;
+      }
+      .button-container {
+        width: 25%;
+        margin: 0 auto;
+      }
+    }
+  }
+  /* Very Large Desktop Screens */ 
+  @media screen and (min-width: 1500px) {
+    #popover {
+      .sticky.donation-popover {
+        top: 400px;
+      }
+    }
+  }
+  /* wordpress specific styles */ 
+  .wp-block-video {
+    width: 40% !important;
+    margin: 0 auto;
+    padding: 20px 0px;
+  }
+  .center-img {
+    margin: 0 auto;
+    padding: 20px 0px;
+  }
+  .volunteer-luncheon-letters {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    img {
+      width: 30%;
+    }
+  }
+  /* map location descriptions */
+  .gmpInfoWindowtitle {
+    font-family: $heading-font;
+    padding: 0px !important;
+  }
+  .egm-marker-iw {
+    color: #000 !important;
+    p {
+      color: #000 !important;
+      margin: 0;
+      padding: 5px 0px;
+    }
+  }
+  /* annual report page template */ 
+  #annual-report-page-template {
+    background: #fff;
+    color: $dark-blue;
+    @include page-header;
+    .container-pdf {
+      margin: 25px 0px; 
+    }
+    .wp-block-file__button {
+      @include body-green-button;
+      font-size: 1.25rem;
+      margin: 10px;
+      &:hover {
+        color: $dark-blue;
+        opacity: 1;
+      }
+    }
+  }
+  /* general page template */
+  #general-page-template {
+    @include page-header;
+    background: #fff;
+    color: $dark-blue;
+  }
+
+  /* smart slider */ 
+  #body-adjust {
+    margin-top: 90px;
+  }
+  #body-adjust-main {
+    margin-top: 70px;
+  }
+  .adjust-container {
+    margin-top: 70px !important;
+  }
+
+  /* slider button */ 
+  div#n2-ss-3 .n2-ss-button-container, div#n2-ss-3 .n2-ss-button-container a {
+    &:hover {
+      background: $light-blue;
+      border-radius: 5px;
+      transition: 1s background-color;
+    }
+  }
+  /* foobox galleries */ 
+  .foogallery {
+    padding: 40px 0px;
+  }
+  .foogallery.fg-light .fg-item-inner {
+    border: none !important;
+    background-color: none !important;
+    box-shadow: none !important;
+  }
+  /* hidden donation page template */
+  #hidden-donation-page-template {
+    @include page-header;
+    background: #fff;
+    color: $dark-blue;
+    .donation-page-content-container {
+      margin: 0 auto;
+      padding: 20px 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      img {
+          width: 100%;
+      }
+      .donation-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      h2 {
+        font-weight: 400;
+        line-height: 2rem;
+        text-transform: none;
+        padding: 20px 0px;
+      }
+    }
+  }
+  /* pop up box */ 
+  #sgpb-popup-dialog-main-div {
+    background-color: $lime-green !important;
+    color: $dark-blue;
+    .sg-popup-builder-content {
+      h1 {
+        line-height: 2rem;
+      }
+      h2 {
+        font-size: 1.75rem;
+        line-height: 1.95rem;
+        text-transform: none;
+      }
+    }
+  }
+  .pop-up-button-container {
+    @include button-container;
+    a:link,
+    a:visited {
+      background: $light-blue;
+      border: 3px solid $light-blue;
+      border-radius: $pill-radius;
+      font-size: 1.5rem;
+      padding: 10px 0px;
+      &:hover {
+        background-color: transparent !important;
+        border: 3px solid $dark-blue;
+        transition: 1s background-color;
+      }
+    }
+  }
+  /* hide popover */ 
+  .hide-popover {
+    display: none !important;
+    visibility: hidden !important;
+  }
+  /* response to COVID-19 page */ 
+  #covid-response-page {
+    @include page-header;
+    @include volunteer-opportunities;
+    background: #fff;
+    color: $dark-blue;
+    .button-container {
+      @include button-container;
+      margin: 0 auto;
+      width: 50%;
+      .rounded-green-button {
+        @include body-green-button;
+      }
+      .rounded-blue-button {
+        @include body-blue-button;
+        margin-bottom: 20px;
+      }
+    }
+    .covid-response-map {
+      width: 100%;
+    }
+  }
+  /* google translate plugin */ 
+  #translate-option {
+    background: $light-blue !important;
+  }
+  .translate-section {
+    z-index: 9999;
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    padding: 3px;
+    border-radius: 0px 5px 0px 0px;
+  }
+  
+  /*
+  * Hide only visually, but have it available for screen readers:
+  * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+  *
+  * 1. For long content, line feeds are not interpreted as spaces and small width
+  *    causes content to wrap 1 word per line:
+  *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+  */
+  
+  .sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    /* 1 */
+  }
+  
+  /*
+  * Extends the .sr-only class to allow the element
+  * to be focusable when navigated to via the keyboard:
+  * https://www.drupal.org/node/897638
+  */
+  
+  .sr-only.focusable:active,
+  .sr-only.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    white-space: inherit;
+    width: auto;
+  }
+  
+  /*
+  * Hide visually and from screen readers, but maintain layout
+  */
+  
+  .invisible {
+    visibility: hidden;
+  }
+  
+  /*
+  * Clearfix: contain floats
+  *
+  * For modern browsers
+  * 1. The space content is one way to avoid an Opera bug when the
+  *    `contenteditable` attribute is included anywhere else in the document.
+  *    Otherwise it causes space to appear at the top and bottom of elements
+  *    that receive the `clearfix` class.
+  * 2. The use of `table` rather than `block` is only necessary if using
+  *    `:before` to contain the top-margins of child elements.
+  */
+  
+  .clearfix:before,
+  .clearfix:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+  }
+  
+  .clearfix:after {
+    clear: both;
+  }
+  
+  /* ==========================================================================
+     EXAMPLE Media Queries for Responsive Design.
+     These examples override the primary ('mobile first') styles.
+     Modify as content requires.
+     ========================================================================== */
+  
+  @media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+  }
+  
+  @media print,
+    (-webkit-min-device-pixel-ratio: 1.25),
+    (min-resolution: 1.25dppx),
+    (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+  }
+  
+  /* ==========================================================================
+     Print styles.
+     Inlined to avoid the additional HTTP request:
+     https://www.phpied.com/delay-loading-your-print-css/
+     ========================================================================== */
+  
+  @media print {
+    *,
+    *:before,
+    *:after {
+      background: transparent !important;
+      color: #000 !important;
+      /* Black prints faster */
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+    a,
+    a:visited {
+      text-decoration: underline;
+    }
+    a[href]:after {
+      content: " (" attr(href) ")";
+    }
+    abbr[title]:after {
+      content: " (" attr(title) ")";
+    }
+    /*
+       * Don't show links that are fragment identifiers,
+       * or use the `javascript:` pseudo protocol
+       */
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+      content: "";
+    }
+    pre {
+      white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+      border: 1px solid #999;
+      page-break-inside: avoid;
+    }
+    /*
+       * Printing Tables:
+       * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+       */
+    thead {
+      display: table-header-group;
+    }
+    tr,
+    img {
+      page-break-inside: avoid;
+    }
+    p,
+    h2,
+    h3 {
+      orphans: 3;
+      widows: 3;
+    }
+    h2,
+    h3 {
+      page-break-after: avoid;
+    }
+  }
+  
+  

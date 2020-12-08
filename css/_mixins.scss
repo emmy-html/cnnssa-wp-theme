@@ -1,0 +1,326 @@
+@mixin body-content-wrapper {
+  margin: 0px 20px;
+}
+@mixin green-button {
+  background: $lime-green;
+  padding: 5px 10px;
+}
+@mixin button-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  a:link,
+  a:visited {
+    border-bottom: none;
+    color: $dark-blue;
+    font-family: $heading-font;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    &:hover {
+      border-bottom: none;
+    }
+  }
+}
+@mixin body-green-button {
+  background: $lime-green;
+  border-radius: 5px;
+  border-bottom: none;
+  padding: 5px 15px;
+  &:hover {
+      background: $light-blue;
+      transition: $bg-transition;
+  }
+}
+@mixin body-blue-button {
+  background: $light-blue;
+  border-radius: 5px;
+  padding: 5px 15px;
+  &:hover {
+      background: $lime-green;
+      transition: $bg-transition;
+  }
+}
+@mixin section-header {
+background: $dark-blue;
+  h1 {
+      color: #fff;
+      padding: 20px 0px;
+      line-height: 1.75rem;
+      span {
+        color: $lime-green;
+      }
+    }
+}
+@mixin page-header {
+  h1 {
+      background: $lime-green;
+      color: $dark-blue;
+      font-size: 1.5rem;
+      line-height: 1.5rem;
+      padding: 10px 0px;
+      margin: 0 auto;
+      width: 100%;
+      span {
+        color: $dark-blue;
+      }
+    }
+}
+@mixin statistic-format {
+      h2 {
+        color: $dark-blue;
+        font-size: 2rem;
+        line-height: 2rem;
+        font-weight: 700;
+        span {
+          display: block;
+          font-weight: 600;
+          font-size: 1.35rem;
+          line-height: 1.45rem;
+          text-transform: none;
+          padding-top: 25px;
+        }
+      }
+}
+@mixin cta-stats {
+  .impact-content {
+      display: flex;
+      flex-direction: column;
+      article {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        width: 100%;
+        height: 360px;
+        h2 {
+          color: $dark-blue;
+          font-size: 5rem;
+          font-weight: 700;
+          line-height: 5rem;
+          width: 80%;
+          margin: 0 auto;
+          padding-bottom: 50px;
+          span {
+            display: block;
+            font-weight: 600;
+            font-size: 1.65rem;
+            line-height: 1.65rem;
+          }
+        }
+        &:nth-of-type(1) {
+          background: center no-repeat url('img/stat_1.png');
+          background-size: cover;
+        }
+        &:nth-of-type(2) {
+          background: center no-repeat url('img/stat_2.png');
+          background-size: cover;
+        }
+        &:nth-of-type(3) {
+          background: center no-repeat url('img/stat_3.png');
+          background-size: cover;
+        }
+      }
+    }
+    @media screen and (min-width: 992px) {
+      .impact-content {
+          display: flex;
+          flex-flow: row nowrap;
+          article {
+            width: 33.3%;
+            h2 {
+              span {
+                display: block;
+              }
+            }
+          }
+        }
+    }
+}
+@mixin page-hero {
+  h1 {
+      background: none;
+      color: #fff;
+      font-size: 2rem;
+      line-height: 2rem;
+      padding-top: 175px;
+      span {
+        color: #fff;
+        display: block;
+      }
+    }
+    @media screen and (min-width: 992px) {
+      h1 {
+          font-size: 3rem;
+          line-height: 3rem;
+          padding-top: 200px;
+        }
+    }
+}
+@mixin secondary-page-header {
+h2 {
+  color: $dark-blue;
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1.3rem;
+  padding: 15px 0px;
+  span {
+    display: block;
+  }
+}
+@media screen and (min-width: 992px) {
+  h2 {
+    span {
+      display: inline-block;
+    }
+  }
+}
+}
+@mixin fontawesome-icon {
+i {
+  background: $dark-blue;
+  color: $lime-green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  border-radius: 200px;
+  margin: 0 auto;
+}
+}
+@mixin other-ways-tabs {
+.other-ways-tabs {
+  display: flex;
+  flex-direction: column;
+  /* Style the tab */
+  .tab {
+    background: $light-blue;
+    width: 100%;
+  }
+
+  /* Style the buttons that are used to open the tab content */
+  .tab button {
+    border: none;
+    outline: none;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+    background-color: $light-blue;
+    color: $dark-blue;
+    font-family: $heading-font;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 10px 0px;
+  }
+
+  /* Change background color of buttons on hover */
+  .tab button:hover {
+    background-color: $dark-blue;
+    color: #fff;
+  }
+
+  /* Create an active/current "tab button" class */
+  .tab button.active {
+    background-color: $lime-green;
+    &:hover {
+      background: $dark-blue;
+      transition: .3s background;
+    }
+  }
+
+  /* Style the tab content */
+  .tabcontent {
+    background: $lime-green;
+    color: $dark-blue;
+    display: none;
+    width: 100%;
+    padding: 20px 0px;
+    img {
+      display: block;
+      margin: 0 auto;
+      padding-bottom: 10px;
+    }
+    h3 {
+      text-transform: none;
+    }
+  }
+}
+@media screen and (min-width: 992px) {
+  .other-ways-tabs {
+    display: flex;
+    flex-direction: row;
+    .tab-button-container {
+      width: 30%;
+      background: $light-blue;
+    }
+    .tab-content-container {
+      width: 70%;
+    }
+    .tab, .tabcontent {
+      height: 300px;
+    }
+    .tabcontent {
+      padding-top: 30px;
+    }
+  }
+}
+}
+@mixin volunteer-opportunities {
+.volunteer-page-opportunities-container {
+  @include fontawesome-icon;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 350px;
+    h2 {
+      font-size: 2rem;
+      line-height: 2rem;
+    }
+    h3 {
+      font-size: 2rem;
+      line-height: 2rem;
+      margin: 0px;
+    }
+    a:link,
+    a:visited {
+      text-decoration: none;
+      &:hover {
+        border-bottom: none;
+      }
+    }
+  }
+h3 {
+  margin-top: 15px;
+}
+aside {
+  padding: 10px 0px;
+  width: 100%;
+}
+}
+@media screen and (min-width: 992px) {
+.volunteer-page-opportunities-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0px;
+  aside {
+    width: 25%;
+    height: 500px;
+    i {
+      margin-top: 40px;
+    }
+  }
+}
+}
+}
