@@ -592,6 +592,7 @@ CNNSSA Parent Theme is distributed under the terms of the GNU GPL
     }
     p {
       font-size: .90rem;
+      line-height: 1rem;
       margin: 8px 0px;
     }
     i {
@@ -2146,17 +2147,20 @@ CNNSSA Parent Theme is distributed under the terms of the GNU GPL
     footer {
       .text-logo {
         margin: 20px;
+        p {
+          width: 500px;
+        }
       }
       .content-wrapper {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+        .social-media {
+          padding-bottom: 15px;
+        }
       }
       p {
         font-size: 1rem;
-      }
-      article.image-footer-logo {
-        padding-top: 100px;
       }
       .navigation {
         a:link,

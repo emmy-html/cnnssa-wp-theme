@@ -1447,6 +1447,7 @@ footer {
     text-align: left; }
   footer p {
     font-size: .90rem;
+    line-height: 1rem;
     margin: 8px 0px; }
   footer i {
     margin-right: 10px; }
@@ -3637,14 +3638,16 @@ footer {
   /* Footer */
   footer .text-logo {
     margin: 20px; }
+    footer .text-logo p {
+      width: 500px; }
   footer .content-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: flex-start; }
+    footer .content-wrapper .social-media {
+      padding-bottom: 15px; }
   footer p {
     font-size: 1rem; }
-  footer article.image-footer-logo {
-    padding-top: 100px; }
   footer .navigation a:link,
   footer .navigation a:visited {
     font-size: 1rem;
