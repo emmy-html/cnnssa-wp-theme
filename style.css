@@ -3519,6 +3519,60 @@ footer {
       background: #a9cf38;
       transition: 1s background; }
 
+/* faq page */
+#faq-page-template {
+  background: #fff;
+  color: #003952;
+  text-align: center; }
+  #faq-page-template h1 {
+    background: #a9cf38;
+    color: #003952;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    padding: 10px 0px;
+    margin: 0 auto;
+    width: 100%; }
+    #faq-page-template h1 span {
+      color: #003952; }
+  #faq-page-template article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto; }
+  #faq-page-template h2 {
+    line-height: 1.75rem;
+    text-transform: none;
+    padding: 10px 0px; }
+  #faq-page-template script {
+    padding-bottom: 20px !important; }
+  #faq-page-template .button-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center; }
+    #faq-page-template .button-container a:link,
+    #faq-page-template .button-container a:visited {
+      border-bottom: none;
+      color: #003952;
+      font-family: "Poppins", sans-serif;
+      font-weight: 700;
+      text-decoration: none;
+      text-transform: uppercase; }
+      #faq-page-template .button-container a:link:hover,
+      #faq-page-template .button-container a:visited:hover {
+        border-bottom: none; }
+    #faq-page-template .button-container .rounded-green-button {
+      background: #a9cf38;
+      border-radius: 5px;
+      border-bottom: none;
+      padding: 5px 15px;
+      margin-bottom: 20px; }
+      #faq-page-template .button-container .rounded-green-button:hover {
+        background: #00b5c2;
+        transition: 1s background; }
+
 /* Large Tablets & Desktop Styles */
 @media screen and (min-width: 992px) {
   /* Universal Styles */
@@ -4167,7 +4221,10 @@ footer {
     padding: 20px 0px; }
   #subaru-event-page .button-container {
     width: 25%;
-    margin: 0 auto; } }
+    margin: 0 auto; }
+
+  #faq-page-template article {
+    width: 75%; } }
 /* Very Large Desktop Screens */
 @media screen and (min-width: 1500px) {
   #popover .sticky.donation-popover {
@@ -4300,6 +4357,8 @@ div#n2-ss-3 .n2-ss-button-container:hover, div#n2-ss-3 .n2-ss-button-container a
       flex-direction: column;
       justify-content: center;
       align-items: center; }
+    #hidden-donation-page-template .donation-page-content-container .donation-container.cnnssa {
+      width: 100% !important; }
     #hidden-donation-page-template .donation-page-content-container h2 {
       font-weight: 400;
       line-height: 2rem;
