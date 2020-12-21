@@ -1076,6 +1076,12 @@ CNNSSA Parent Theme is distributed under the terms of the GNU GPL
         border: none;
         outline: none;
         transition: 0.4s;
+        &:after {
+          font-family: "Font Awesome 5 Free";
+          font-size: .75rem;
+          content: '\f067';
+          margin-left: 5px;
+        }
       }
       /* add a background to the question if it's clicked on & when you move the mouse over it */
       .active,
@@ -1083,16 +1089,11 @@ CNNSSA Parent Theme is distributed under the terms of the GNU GPL
         background: #fff;
         color: $dark-blue;
       }
-      .accordion:after {
-        content: '\02795';
-        font-size: 13px;
-        color: $dark-blue !important;
-        float: right;
-        margin-left: 5px;
-      }
       .active:after {
-        content: "\2796";
-        color: $dark-blue !important;
+        font-family: "Font Awesome 5 Free";
+        font-size: .75rem;
+        content: '\f068';
+        margin-left: 5px;
       }
       /* style the accordion panel; hidden by default */
       .panel {
