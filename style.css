@@ -896,14 +896,14 @@ html {
   line-height: 1.4; }
 
 /*
- * Remove text-shadow in selection highlight:
- * https://twitter.com/miketaylr/status/12228805301
- *
- * Vendor-prefixed and regular ::selection selectors cannot be combined:
- * https://stackoverflow.com/a/16982510/7133471
- *
- * Customize the background color to match your design.
- */
+   * Remove text-shadow in selection highlight:
+   * https://twitter.com/miketaylr/status/12228805301
+   *
+   * Vendor-prefixed and regular ::selection selectors cannot be combined:
+   * https://stackoverflow.com/a/16982510/7133471
+   *
+   * Customize the background color to match your design.
+   */
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none; }
@@ -913,8 +913,8 @@ html {
   text-shadow: none; }
 
 /*
- * A better looking default horizontal rule
- */
+   * A better looking default horizontal rule
+   */
 hr {
   display: block;
   height: 1px;
@@ -924,10 +924,10 @@ hr {
   padding: 0; }
 
 /*
- * Remove the gap between audio, canvas, iframes,
- * images, videos and the bottom of their containers:
- * https://github.com/h5bp/html5-boilerplate/issues/440
- */
+   * Remove the gap between audio, canvas, iframes,
+   * images, videos and the bottom of their containers:
+   * https://github.com/h5bp/html5-boilerplate/issues/440
+   */
 audio,
 canvas,
 iframe,
@@ -937,22 +937,22 @@ video {
   vertical-align: middle; }
 
 /*
- * Remove default fieldset styles.
- */
+   * Remove default fieldset styles.
+   */
 fieldset {
   border: 0;
   margin: 0;
   padding: 0; }
 
 /*
- * Allow only vertical resizing of textareas.
- */
+   * Allow only vertical resizing of textareas.
+   */
 textarea {
   resize: vertical; }
 
 /* ==========================================================================
-   Browser Upgrade Prompt
-   ========================================================================== */
+     Browser Upgrade Prompt
+     ========================================================================== */
 .browserupgrade {
   margin: 0.2em 0;
   background: #ccc;
@@ -960,11 +960,11 @@ textarea {
   padding: 0.2em 0; }
 
 /* ==========================================================================
-   Helper classes
-   ========================================================================== */
+     Helper classes
+     ========================================================================== */
 /*
- * Hide visually and from screen readers
- */
+   * Hide visually and from screen readers
+   */
 .hidden {
   display: none !important; }
 
@@ -1012,7 +1012,7 @@ textarea {
       border: none;
       color: #003952;
       font-family: "Poppins", sans-serif;
-      font-size: .75rem;
+      font-size: 0.75rem;
       font-weight: 900;
       margin-left: 280px; }
     #popover .popover-content h1 {
@@ -1054,13 +1054,19 @@ body {
   font-size: 16px;
   line-height: 1.35rem; }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   margin: 0;
   text-align: center; }
 
-h2, h4 {
+h2,
+h4 {
   font-weight: 400; }
 
 .content-wrapper {
@@ -1131,8 +1137,9 @@ main a:visited {
   #newsletter .newsletter-container .content-wrapper {
     margin-top: 0px;
     padding-top: 0px; }
-  #newsletter .newsletter-container h2, #newsletter .newsletter-container h3 {
-    line-height: 1.30rem;
+  #newsletter .newsletter-container h2,
+  #newsletter .newsletter-container h3 {
+    line-height: 1.3rem;
     margin: 0;
     text-align: left; }
   #newsletter .newsletter-container h2 {
@@ -1428,7 +1435,7 @@ footer {
     footer a:link:hover,
     footer a:visited:hover {
       color: #a9cf38;
-      transition: .3s color; }
+      transition: 0.3s color; }
   footer .content-wrapper {
     padding: 25px 0px; }
   footer .text-logo {
@@ -1446,7 +1453,7 @@ footer {
     font-weight: 300;
     text-align: left; }
   footer p {
-    font-size: .90rem;
+    font-size: 0.9rem;
     line-height: 1rem;
     margin: 8px 0px; }
   footer i {
@@ -1472,7 +1479,7 @@ footer {
     footer .navigation a:link,
     footer .navigation a:visited {
       color: #fff;
-      font-size: .75rem;
+      font-size: 0.75rem;
       text-decoration: none; }
     footer .navigation a:hover {
       color: #a9cf38;
@@ -1738,7 +1745,8 @@ footer {
     padding: 20px;
     width: 250px; }
   @media screen and (min-width: 992px) {
-    #resources-page .other-ways-tabs .tab, #resources-page .other-ways-tabs .tabcontent {
+    #resources-page .other-ways-tabs .tab,
+    #resources-page .other-ways-tabs .tabcontent {
       height: 550px; } }
   #resources-page .resource-page-span {
     background: center no-repeat url("img/hero.png");
@@ -1898,7 +1906,7 @@ footer {
         background: #00b5c2;
         color: #003952; }
       #donation-page .donation-page-content-container .faq-container .accordion:after {
-        content: '\02795';
+        content: "\02795";
         font-size: 13px;
         color: #003952 !important;
         float: right;
@@ -2065,8 +2073,8 @@ footer {
     transition: 0.4s; }
     #donation-page-corporate-giving .donation-page-corporate-container .faq-container .accordion:after {
       font-family: "Font Awesome 5 Free";
-      font-size: .75rem;
-      content: '\f067';
+      font-size: 0.75rem;
+      content: "\f067";
       margin-left: 5px; }
   #donation-page-corporate-giving .donation-page-corporate-container .faq-container .active,
   #donation-page-corporate-giving .donation-page-corporate-container .faq-container .accordion:hover {
@@ -2074,8 +2082,8 @@ footer {
     color: #003952; }
   #donation-page-corporate-giving .donation-page-corporate-container .faq-container .active:after {
     font-family: "Font Awesome 5 Free";
-    font-size: .75rem;
-    content: '\f068';
+    font-size: 0.75rem;
+    content: "\f068";
     margin-left: 5px; }
   #donation-page-corporate-giving .donation-page-corporate-container .faq-container .panel {
     padding: 0 18px;
@@ -2642,7 +2650,7 @@ footer {
         #volunteer-page-hero .volunteer-page-options article a:visited:hover {
           border-bottom: none; }
       #volunteer-page-hero .volunteer-page-options article:hover {
-        opacity: .75;
+        opacity: 0.75;
         transition: 1s opacity; }
 
 #volunteer-page-opportunities {
@@ -3026,7 +3034,7 @@ footer {
         #get-involved-page-cta .get-involved-cta-container article a:visited:hover {
           border-bottom: none; }
       #get-involved-page-cta .get-involved-cta-container article:hover {
-        opacity: .75;
+        opacity: 0.75;
         transition: 1s opacity; }
 
 /* About Meals On Wheels Page */
@@ -3216,9 +3224,9 @@ footer {
         #about-mow-page-locations .about-mow-page-locations-content .map-locations .map-locations-container aside .content-wrapper div {
           width: 100%; }
         #about-mow-page-locations .about-mow-page-locations-content .map-locations .map-locations-container aside .content-wrapper .location-more-info {
-          font-size: .80rem; }
+          font-size: 0.8rem; }
           #about-mow-page-locations .about-mow-page-locations-content .map-locations .map-locations-container aside .content-wrapper .location-more-info i.fas.fa-location-arrow {
-            font-size: .55rem; }
+            font-size: 0.55rem; }
           #about-mow-page-locations .about-mow-page-locations-content .map-locations .map-locations-container aside .content-wrapper .location-more-info a {
             margin-right: 3px; }
           #about-mow-page-locations .about-mow-page-locations-content .map-locations .map-locations-container aside .content-wrapper .location-more-info i {
@@ -3231,7 +3239,7 @@ footer {
         #about-mow-page-locations .about-mow-page-locations-content .map-locations .map-locations-container aside h3 span {
           display: block;
           font-weight: 300;
-          line-height: 1.20rem;
+          line-height: 1.2rem;
           text-transform: none; }
       #about-mow-page-locations .about-mow-page-locations-content .map-locations .map-locations-container aside .pick-up-time {
         padding-bottom: 10px; }
@@ -3574,6 +3582,144 @@ footer {
         background: #00b5c2;
         transition: 1s background; }
 
+/* Grundy & Kendall County Page Template */
+#gk-county-page-template {
+  background: #fff;
+  color: #003952; }
+  #gk-county-page-template h1 {
+    background: #a9cf38;
+    color: #003952;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    padding: 10px 0px;
+    margin: 0 auto;
+    width: 100%; }
+    #gk-county-page-template h1 span {
+      color: #003952; }
+  #gk-county-page-template .gk-county-page-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    #gk-county-page-template .gk-county-page-content .gk-county-page-application h2 {
+      font-weight: bold;
+      padding: 10px 0px; }
+      #gk-county-page-template .gk-county-page-content .gk-county-page-application h2 span {
+        display: block; }
+    #gk-county-page-template .gk-county-page-content .gk-county-page-application .ccu-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      #gk-county-page-template .gk-county-page-content .gk-county-page-application .ccu-info h3 {
+        padding: 5px 0px; }
+      #gk-county-page-template .gk-county-page-content .gk-county-page-application .ccu-info p {
+        margin: 0;
+        padding: 0px; }
+    #gk-county-page-template .gk-county-page-content .gk-county-page-application .button-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center; }
+      #gk-county-page-template .gk-county-page-content .gk-county-page-application .button-container a:link,
+      #gk-county-page-template .gk-county-page-content .gk-county-page-application .button-container a:visited {
+        border-bottom: none;
+        color: #003952;
+        font-family: "Poppins", sans-serif;
+        font-weight: 700;
+        text-decoration: none;
+        text-transform: uppercase; }
+        #gk-county-page-template .gk-county-page-content .gk-county-page-application .button-container a:link:hover,
+        #gk-county-page-template .gk-county-page-content .gk-county-page-application .button-container a:visited:hover {
+          border-bottom: none; }
+      #gk-county-page-template .gk-county-page-content .gk-county-page-application .button-container .rounded-green-button {
+        background: #a9cf38;
+        border-radius: 5px;
+        border-bottom: none;
+        padding: 5px 15px;
+        margin: 10px; }
+        #gk-county-page-template .gk-county-page-content .gk-county-page-application .button-container .rounded-green-button:hover {
+          background: #00b5c2;
+          transition: 1s background; }
+  #gk-county-page-template .map-locations p {
+    text-align: justify; }
+  #gk-county-page-template .map-locations .map-locations-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 10px; }
+    #gk-county-page-template .map-locations .map-locations-container aside {
+      width: 100%;
+      padding-bottom: 25px; }
+      #gk-county-page-template .map-locations .map-locations-container aside .content-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; }
+        #gk-county-page-template .map-locations .map-locations-container aside .content-wrapper div {
+          width: 100%; }
+        #gk-county-page-template .map-locations .map-locations-container aside .content-wrapper .location-more-info {
+          font-size: 0.8rem; }
+          #gk-county-page-template .map-locations .map-locations-container aside .content-wrapper .location-more-info i.fas.fa-location-arrow {
+            font-size: 0.55rem; }
+          #gk-county-page-template .map-locations .map-locations-container aside .content-wrapper .location-more-info a {
+            margin-right: 3px; }
+          #gk-county-page-template .map-locations .map-locations-container aside .content-wrapper .location-more-info i {
+            margin: 0px 2.5px; }
+      #gk-county-page-template .map-locations .map-locations-container aside h3 {
+        font-size: 1rem;
+        text-transform: uppercase;
+        line-height: 1.25rem;
+        margin: 0; }
+        #gk-county-page-template .map-locations .map-locations-container aside h3 span {
+          display: block;
+          font-weight: 300;
+          line-height: 1.2rem;
+          text-transform: none; }
+      #gk-county-page-template .map-locations .map-locations-container aside .pick-up-time {
+        padding-bottom: 10px; }
+      #gk-county-page-template .map-locations .map-locations-container aside p {
+        line-height: 1.25rem;
+        margin: 0;
+        padding-bottom: 10px;
+        text-align: center; }
+  #gk-county-page-template .map {
+    width: 100%;
+    height: auto; }
+  #gk-county-page-template h1.more-about-mow {
+    background: #003952;
+    color: #fff; }
+  #gk-county-page-template .about-mow-page-programs-span {
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 30px 0px; }
+    #gk-county-page-template .about-mow-page-programs-span i {
+      background: #003952;
+      color: #a9cf38;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      height: 100px;
+      text-align: center;
+      border-radius: 200px;
+      margin: 0 auto; }
+    #gk-county-page-template .about-mow-page-programs-span h2 {
+      font-weight: bold;
+      padding: 15px 0px; }
+      #gk-county-page-template .about-mow-page-programs-span h2 span {
+        display: block; }
+    #gk-county-page-template .about-mow-page-programs-span:nth-of-type(even) {
+      background: #00b5c2; }
+    #gk-county-page-template .about-mow-page-programs-span p {
+      margin: 0;
+      padding: 0px 20px;
+      text-align: justify; }
+
 /* Large Tablets & Desktop Styles */
 @media screen and (min-width: 992px) {
   /* Universal Styles */
@@ -3619,7 +3765,8 @@ footer {
     #newsletter .content-wrapper .ctct-form-defaults {
       margin: 0;
       padding: 0; }
-  #newsletter .newsletter-container h2, #newsletter .newsletter-container h3 {
+  #newsletter .newsletter-container h2,
+  #newsletter .newsletter-container h3 {
     line-height: 2.4rem; }
   #newsletter .newsletter-container h2 {
     font-size: 1.85rem; }
@@ -3706,7 +3853,7 @@ footer {
   footer .navigation a:link,
   footer .navigation a:visited {
     font-size: 1rem;
-    line-height: 1.20rem; }
+    line-height: 1.2rem; }
 
   /* About Page > About Us Section */
   #about-page-hero .about-page-hero-content {
@@ -4106,20 +4253,20 @@ footer {
         #suggestion-box-popover .suggestion-box-popover-content a:visited:hover {
           background: #a9cf38;
           border-bottom: none !important;
-          transition: .3s background-color; }
+          transition: 0.3s background-color; }
       #suggestion-box-popover .suggestion-box-popover-content button {
         background: #00b5c2;
         border: none;
         color: #003952;
         font-family: "Poppins", sans-serif;
-        font-size: .75rem;
+        font-size: 0.75rem;
         font-weight: 900;
         padding: 5px;
         width: 35px; }
         #suggestion-box-popover .suggestion-box-popover-content button:hover {
           background: #a9cf38;
           cursor: pointer;
-          transition: .3s background-color; }
+          transition: 0.3s background-color; }
 
   #popover {
     padding: 0px !important;
@@ -4166,7 +4313,7 @@ footer {
     color: #fff;
     display: block;
     font-family: "Poppins", sans-serif;
-    font-size: .75rem;
+    font-size: 0.75rem;
     height: 25px;
     padding: 5px;
     position: fixed;
@@ -4188,7 +4335,7 @@ footer {
       background: #000;
       border: none;
       color: #a9cf38;
-      font-size: .65rem;
+      font-size: 0.65rem;
       font-weight: 700;
       margin-left: 5px; }
       .topbar button:hover {
@@ -4212,8 +4359,8 @@ footer {
       opacity: 1; }
       #subaru-event-page .subaru-event-page-stats .subaru-event-stat-photo-two:hover {
         cursor: pointer;
-        opacity: .5;
-        transition: .3s opacity; }
+        opacity: 0.5;
+        transition: 0.3s opacity; }
   #subaru-event-page .subaru-event-page-desc {
     width: 75%;
     display: flex;
@@ -4225,7 +4372,49 @@ footer {
     margin: 0 auto; }
 
   #faq-page-template article {
-    width: 75%; } }
+    width: 75%; }
+
+  /* Grundy & Kendall County Pages */
+  #gk-county-page-template .gk-county-page-content {
+    display: flex;
+    flex-direction: row; }
+    #gk-county-page-template .gk-county-page-content .gk-county-page-content-container {
+      width: 75%; }
+    #gk-county-page-template .gk-county-page-content .gk-county-page-application .ccu-info {
+      display: flex;
+      flex-direction: row; }
+      #gk-county-page-template .gk-county-page-content .gk-county-page-application .ccu-info img {
+        padding-right: 10px; }
+    #gk-county-page-template .gk-county-page-content .map-locations-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      #gk-county-page-template .gk-county-page-content .map-locations-container aside {
+        width: 100%; }
+        #gk-county-page-template .gk-county-page-content .map-locations-container aside .content-wrapper {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-start;
+          justify-content: space-between;
+          text-align: center; }
+          #gk-county-page-template .gk-county-page-content .map-locations-container aside .content-wrapper div:nth-of-type(1) {
+            width: 45%; }
+          #gk-county-page-template .gk-county-page-content .map-locations-container aside .content-wrapper div:nth-of-type(2) {
+            width: 25%; }
+          #gk-county-page-template .gk-county-page-content .map-locations-container aside .content-wrapper div:nth-of-type(3) {
+            width: 25%; }
+  #gk-county-page-template .about-mow-page-programs {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center; }
+  #gk-county-page-template .about-mow-page-programs-span {
+    height: 300px; }
+    #gk-county-page-template .about-mow-page-programs-span:nth-of-type(1) {
+      background: #a9cf38; }
+    #gk-county-page-template .about-mow-page-programs-span p {
+      padding: 0px 100px; } }
 /* Very Large Desktop Screens */
 @media screen and (min-width: 1500px) {
   #popover .sticky.donation-popover {
@@ -4317,7 +4506,8 @@ footer {
   margin-top: 70px !important; }
 
 /* slider button */
-div#n2-ss-3 .n2-ss-button-container:hover, div#n2-ss-3 .n2-ss-button-container a:hover {
+div#n2-ss-3 .n2-ss-button-container:hover,
+div#n2-ss-3 .n2-ss-button-container a:hover {
   background: #00b5c2;
   border-radius: 5px;
   transition: 1s background-color; }
@@ -4527,13 +4717,13 @@ div#n2-ss-3 .n2-ss-button-container:hover, div#n2-ss-3 .n2-ss-button-container a
   border-radius: 0px 5px 0px 0px; }
 
 /*
-* Hide only visually, but have it available for screen readers:
-* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
-*
-* 1. For long content, line feeds are not interpreted as spaces and small width
-*    causes content to wrap 1 word per line:
-*    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
-*/
+  * Hide only visually, but have it available for screen readers:
+  * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+  *
+  * 1. For long content, line feeds are not interpreted as spaces and small width
+  *    causes content to wrap 1 word per line:
+  *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+  */
 .sr-only {
   border: 0;
   clip: rect(0, 0, 0, 0);
@@ -4547,10 +4737,10 @@ div#n2-ss-3 .n2-ss-button-container:hover, div#n2-ss-3 .n2-ss-button-container a
   /* 1 */ }
 
 /*
-* Extends the .sr-only class to allow the element
-* to be focusable when navigated to via the keyboard:
-* https://www.drupal.org/node/897638
-*/
+  * Extends the .sr-only class to allow the element
+  * to be focusable when navigated to via the keyboard:
+  * https://www.drupal.org/node/897638
+  */
 .sr-only.focusable:active,
 .sr-only.focusable:focus {
   clip: auto;
@@ -4562,22 +4752,22 @@ div#n2-ss-3 .n2-ss-button-container:hover, div#n2-ss-3 .n2-ss-button-container a
   width: auto; }
 
 /*
-* Hide visually and from screen readers, but maintain layout
-*/
+  * Hide visually and from screen readers, but maintain layout
+  */
 .invisible {
   visibility: hidden; }
 
 /*
-* Clearfix: contain floats
-*
-* For modern browsers
-* 1. The space content is one way to avoid an Opera bug when the
-*    `contenteditable` attribute is included anywhere else in the document.
-*    Otherwise it causes space to appear at the top and bottom of elements
-*    that receive the `clearfix` class.
-* 2. The use of `table` rather than `block` is only necessary if using
-*    `:before` to contain the top-margins of child elements.
-*/
+  * Clearfix: contain floats
+  *
+  * For modern browsers
+  * 1. The space content is one way to avoid an Opera bug when the
+  *    `contenteditable` attribute is included anywhere else in the document.
+  *    Otherwise it causes space to appear at the top and bottom of elements
+  *    that receive the `clearfix` class.
+  * 2. The use of `table` rather than `block` is only necessary if using
+  *    `:before` to contain the top-margins of child elements.
+  */
 .clearfix:before,
 .clearfix:after {
   content: " ";
@@ -4589,19 +4779,19 @@ div#n2-ss-3 .n2-ss-button-container:hover, div#n2-ss-3 .n2-ss-button-container a
   clear: both; }
 
 /* ==========================================================================
-   EXAMPLE Media Queries for Responsive Design.
-   These examples override the primary ('mobile first') styles.
-   Modify as content requires.
-   ========================================================================== */
+     EXAMPLE Media Queries for Responsive Design.
+     These examples override the primary ('mobile first') styles.
+     Modify as content requires.
+     ========================================================================== */
 @media only screen and (min-width: 35em) {
   /* Style adjustments for viewports that meet the condition */ }
 @media print, (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 1.25dppx), (min-resolution: 120dpi) {
   /* Style adjustments for high resolution devices */ }
 /* ==========================================================================
-   Print styles.
-   Inlined to avoid the additional HTTP request:
-   https://www.phpied.com/delay-loading-your-print-css/
-   ========================================================================== */
+     Print styles.
+     Inlined to avoid the additional HTTP request:
+     https://www.phpied.com/delay-loading-your-print-css/
+     ========================================================================== */
 @media print {
   *,
   *:before,
@@ -4623,9 +4813,9 @@ div#n2-ss-3 .n2-ss-button-container:hover, div#n2-ss-3 .n2-ss-button-container a
     content: " (" attr(title) ")"; }
 
   /*
-     * Don't show links that are fragment identifiers,
-     * or use the `javascript:` pseudo protocol
-     */
+       * Don't show links that are fragment identifiers,
+       * or use the `javascript:` pseudo protocol
+       */
   a[href^="#"]:after,
   a[href^="javascript:"]:after {
     content: ""; }
@@ -4639,9 +4829,9 @@ div#n2-ss-3 .n2-ss-button-container:hover, div#n2-ss-3 .n2-ss-button-container a
     page-break-inside: avoid; }
 
   /*
-     * Printing Tables:
-     * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
-     */
+       * Printing Tables:
+       * https://web.archive.org/web/20180815150934/http://css-discuss.incutio.com/wiki/Printing_Tables
+       */
   thead {
     display: table-header-group; }
 
